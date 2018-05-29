@@ -3,7 +3,7 @@ service: chromeless-serverless
 custom:
   stage: dev
   debug: "*"
-  awsIotHost: ${env:AWS_IOT_HOST}
+  awsIotHost: "a17394iila52ve.iot.us-east-1.amazonaws.com"
   chrome:
     functions:
       - run
@@ -12,7 +12,7 @@ provider:
   name: aws
   runtime: nodejs6.10
   stage: ${self:custom.stage}
-  region: eu-west-1
+  region: us-east-1
   environment:
     DEBUG: ${self:custom.debug}
     AWS_IOT_HOST: ${self:custom.awsIotHost}
